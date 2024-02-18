@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.text-outline {
+  -webkit-text-stroke: 1px black;
+  color: transparent; 
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -99,7 +102,7 @@ body {
   /* TYPOGRAPHY */
   /* 64 */
   .h1-bold {
-    @apply font-bold text-[40px] leading-[48px] lg:text-[48px] lg:leading-[60px]  xl:text-[58px] xl:leading-[74px];
+    @apply font-bold text-[40px] leading-[38px] lg:text-[48px] lg:leading-[40px]  xl:text-[58px] xl:leading-[54px];
   }
 
   /* 40 */
