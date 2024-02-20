@@ -38,40 +38,18 @@
 /* END: General styles */
 
 /* START: Hero styles */
-/* .hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
-}
 
-.hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
-}
-
-.hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
-}
-
-.hero__image-container {
-  @apply  flex justify-end items-end w-[35vw];
-}
-
-.hero__image {
-  @apply relative xl:w-full w-[90%] h-[590px] z-0 mr-[-300px] mt-16;
-}
-
-.hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-[90%] h-[590px] overflow-hidden;
-} */
 
 .hero {
   @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold leading-none ;
+  @apply 2xl:text-[72px] sm:text-[64px] text-[40px] font-extrabold leading-none ;
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[20px] text-black-100 font-light mt-5;
 }
 
 .hero__image-container {
@@ -232,7 +210,7 @@
 
 /* START: search manufacturer styles */
 .search-manufacturer {
-  @apply flex-1 max-sm:w-full flex justify-start items-center;
+  @apply flex-1 max-w-[210px] flex justify-start items-center;
 }
 
 .search-manufacturer__input {
@@ -240,19 +218,19 @@
 }
 
 .search-manufacturer__options {
-  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+  @apply absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm w-full;
 }
 
 .search-manufacturer__option {
-  @apply cursor-default select-none py-2 pl-10 pr-4;
+  @apply cursor-default select-none py-2 pl-5 pr-4;
 }
 /* END: search manufacturer styles */
 @font-face {
-  font-family: 'Hanson';
+  font-family: 'Gemsbuck';
   src: url('/fonts/Gemsbuck.ttf') format('truetype');
 }
 
-.font-hanson {
-  font-family: 'Hanson', sans-serif;
+.font-gemsbuck {
+  font-family: 'Gemsbuck', sans-serif;
   font-weight: bold;
 }

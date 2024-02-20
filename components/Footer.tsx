@@ -4,11 +4,11 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="bg-gray-200">
-      <div className="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between">
+      <div className="container flex flex-wrap items-center justify-center py-5 mx-auto  lg:justify-between">
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
             <li><Link href={"/"}>
-                <Image src="/logo.svg" width={100} height={100} alt="logo" />
+                <Image src="/logo.svg" width={100} height={100} alt="logo" className="object-contain w-10 mr-2 sm:w-16"/>
                 </Link>
             </li>
           </ul>
