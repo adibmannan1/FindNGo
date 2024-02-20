@@ -1,16 +1,26 @@
-// const url = 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?limit=10';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '64e68b590dmshbe1e0bff85cc930p17d6b5jsnc9f3144e3200',
-// 		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
-// 	}
-// };
+export async function fetchCars() {
+    const headers = {
+		'X-RapidAPI-Key': '64e68b590dmshbe1e0bff85cc930p17d6b5jsnc9f3144e3200',
+		'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
+	}
 
-// try {
-// 	const response = await fetch(url, options);
-// 	const result = await response.text();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
+    const response = await fetch('https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla&limit=16', { headers: headers })
+    const result = await response.json()
+    return result
+}
+
+//function for calculation car rent price
+export const calculateCarRent = (city_mpg: number, year: number) => {
+    const randomFactor = 3 + Math.random() * 30;
+    const randomFactor2 = 10 + Math.random() * 123;
+    const basePricePerDay = 100 + randomFactor * randomFactor2; // Base rental price per day in dollars
+    const mileageFactor = 30; // Additional rate per mile driven
+    const ageFactor = 2; // Additional rate per year of vehicle age
+    
+    // Generate a random factor between 0.9 and 1.1 for variation
+
+    // Calculate total rental rate per day with the random factor
+    const rentalRatePerDay = basePricePerDay + (city_mpg * mileageFactor) + ((new Date().getFullYear() - year) * ageFactor * randomFactor);
+
+    return Math.floor(rentalRatePerDay);
+};

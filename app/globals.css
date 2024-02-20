@@ -96,9 +96,8 @@
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-lg transition-all duration-200 ease-in;
 }
-
 .car-card__content {
   @apply w-full flex justify-between items-start gap-2;
 }

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
             <li><Link href={"/"}>
-                <Image src="/logo.svg" width={100} height={100} alt="logo" className="object-contain w-10 mr-2 sm:w-16"/>
+                <Image src="/logo.svg" width={100} height={90} alt="logo" className="object-contain w-10 mr-2 sm:w-16"/>
                 </Link>
             </li>
           </ul>
