@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { CarProps } from '@/types';
 import CustomButton from './CustomButton';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarUrl } from '@/utils';
 import Image from 'next/image';
+import CarDetails from './CarDetails';
 
 interface CarCardProps {
   car: CarProps;
@@ -32,12 +33,12 @@ const CarCard = ({ car }: CarCardProps) => {
         </span>
           {carRent}
         <span className='self-end text-[14px] font-semibold'>
-          / Day
+          / Month
         </span>
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src='/hero.png' alt='car image' fill priority className='object-contain' />
+        <Image src={generateCarUrl(car)} alt='car image' fill priority className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
@@ -74,6 +75,8 @@ const CarCard = ({ car }: CarCardProps) => {
           />
         </div>
       </div>
+
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car}/>
     </div>
   );
 };
