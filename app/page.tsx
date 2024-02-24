@@ -4,6 +4,14 @@ import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
+import { Space_Grotesk} from 'next/font/google'
+ 
+const grotesk = Space_Grotesk({
+  weight: ['500', '600', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default async function Home({searchParams}:any) {
   const allCars = await fetchCars({
@@ -24,7 +32,7 @@ export default async function Home({searchParams}:any) {
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold">Car Categories</h1>
+          <h1 className={`text-4xl font-extrabold ${grotesk.className}`}>Car Categories</h1>
           <p>Browse the best cars in the world.</p>
         </div>
 

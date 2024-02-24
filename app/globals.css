@@ -8,14 +8,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
 }
 
 /* START: General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
-
+.manrope{
+  font-family: "Manrope", sans-serif;
+}
 .padding-x {
   @apply sm:px-16 px-6;
 }
