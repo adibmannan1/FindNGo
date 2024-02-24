@@ -26,7 +26,7 @@ const CarDetails = ({ isOpen, closeModal, car}: CarDetailsProps) => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="fixed inset-0 bg-black bg-opacity-30 custom-backdrop-blur" />
+                <div className="fixed inset-0 bg-[#121619da] bg-opacity-30 custom-backdrop-blur" />
               </Transition.Child>
       
               <div className="fixed inset-0 overflow-y-auto">
@@ -77,7 +77,7 @@ const CarDetails = ({ isOpen, closeModal, car}: CarDetailsProps) => {
                           {Object.entries(car).map(([key, value])=>(
                             <div className='flex justify-between gap-5 w-full text-right' key={key}>
                               <h4 className='text-gray-500 capitalize'>{key.split("_").join(" ")}</h4>
-                              <p className='text-black-100 font-semibold'>{value}</p>
+                              <p className='text-[#121619da] font-semibold'>{value}</p>
                             </div>
                           )
 

@@ -50,7 +50,7 @@
 }
 
 .hero__subtitle {
-  @apply text-[20px] text-black-100 font-light mt-5;
+  @apply text-[20px] text-[#121619da] font-light mt-5;
 }
 
 .hero__image-container {
@@ -58,7 +58,7 @@
 }
 
 .hero__image {
-  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+  @apply relative w-[90%] mr-20 xl:h-full z-0;
 }
 
 .hero__image-overlay {
@@ -75,7 +75,7 @@
 /* START: Home styles */
 
 .home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-[#121619];
 }
 
 .home__filters {
@@ -97,14 +97,14 @@
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-lg transition-all duration-100 ease-in;
+  @apply flex flex-col p-6 justify-center items-start text-[#6c3723] bg-[#f5f1e9] hover:bg-white hover:shadow-md rounded-lg transition-all duration-100 ease-in;
 }
 .car-card__content {
   @apply w-full flex justify-between items-start gap-2;
 }
 
 .car-card__content-title {
-  @apply text-[22px] leading-[26px] font-bold capitalize;
+  @apply text-[22px] leading-[26px] font-bold text-[#121619] capitalize;
 }
 
 .car-card__price {
@@ -166,7 +166,8 @@
 
 /* START: Footer styles */
 .footer {
-  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100;
+  @apply flex flex-col text-[#191212b8]  mt-5 border-t border-gray-100;
+  /* #121619da */
 }
 
 .footer__links-container {
@@ -210,7 +211,7 @@
 
 /* START: search manufacturer styles */
 .search-manufacturer {
-  @apply flex-1 max-w-[210px] flex justify-start items-center;
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
 }
 
 .search-manufacturer__input {
@@ -218,11 +219,11 @@
 }
 
 .search-manufacturer__options {
-  @apply absolute mt-1 max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm w-full;
+  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-[#121619da] ring-opacity-5 focus:outline-none sm:text-sm;
 }
 
 .search-manufacturer__option {
-  @apply cursor-default select-none py-2 pl-5 pr-4;
+  @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search manufacturer styles */
 @font-face {

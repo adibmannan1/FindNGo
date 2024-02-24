@@ -3,21 +3,25 @@ import React, {useState, Fragment} from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Listbox, Transition } from '@headlessui/react'
-import { CustomFilterProps } from '@/types'
+import { CustomFilterProps, OptionProps } from '@/types'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { updateSearchParams } from '@/utils'
 
-const CustomFilter = ({title, options}:CustomFilterProps) => {
+const CustomFilter = ({title, options, setFilter}:CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0])
 
   return (
     <div className="w-fit">
-      <Listbox value={selected} onChange={setSelected}>
+      <Listbox value={selected} onChange={(e) => {
+        setSelected(e)
+        setFilter(e.value)
+      }}>
         <div className="relative w-fit z-10">
           <Listbox.Button className="custom-filter__btn">
             <span className="block truncate">{selected.title}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronUpDownIcon
-              className="h-5 w-5 text-black"
+              className="h-5 w-5 text-[#121619da]"
               aria-hidden="true"
               />
             </span>
@@ -31,7 +35,7 @@ const CustomFilter = ({title, options}:CustomFilterProps) => {
             enterFrom="opacity-0"
             enterTo="opacity-100"
           >
-            <Listbox.Options style={{ scrollbarWidth: 'none'}} className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-sm ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options style={{ scrollbarWidth: 'none'}} className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-sm ring-1 ring-[#121619da] ring-opacity-5 focus:outline-none sm:text-sm">
               {options.map((option) => (
                 <Listbox.Option
                   key={option.title}
@@ -46,7 +50,7 @@ const CustomFilter = ({title, options}:CustomFilterProps) => {
                     <>
                       <span
                         className={`block truncate ${
-                          selected ? 'font-black' : 'font-normal'
+                          selected ? 'font-[#121619da]' : 'font-normal'
                         }`}
                       >
                         {option.title}
