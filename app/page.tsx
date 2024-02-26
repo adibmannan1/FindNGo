@@ -55,7 +55,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Hero/>
 
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
+      <div className="mt-20 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className={`text-4xl font-extrabold ${grotesk.className}`}>Car Categories</h1>
           <p>Browse the best cars in the world.</p>

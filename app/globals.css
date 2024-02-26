@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,6 +18,12 @@
 }
 .manrope{
   font-family: "Manrope", sans-serif;
+}
+.montserrat{
+  font-family: "Montserrat", sans-serif;
+}
+.poppins{
+  font-family: "Poppins", sans-serif;
 }
 .padding-x {
   @apply sm:px-16 px-6;
@@ -46,11 +54,11 @@
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[40px] font-extrabold leading-none ;
+  @apply sm:text-[82px] text-[40px] font-bold leading-[70px] ;
 }
 
 .hero__subtitle {
-  @apply text-[20px] text-[#121619da] font-light mt-5;
+  @apply text-[18px] text-[#121619da] font-medium mt-5 leading-relaxed;
 }
 
 .hero__image-container {

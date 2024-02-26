@@ -69,7 +69,7 @@ const CarCard = ({ car }: CarCardProps) => {
           <CustomButton
             title='View More'
             containerStyles='w-full py-[16px] rounded-md bg-[#ffa552]'
-            textStyles='text-white text-[14px] leading-[17px] font-bold'
+            textStyles='text-white font-medium text-[14px] leading-[17px] font-bold poppins'
             rightIcon='/right-arrow.svg'
             handleClick={() => setIsOpen(true)}
           />
