@@ -54,11 +54,11 @@
 }
 
 .hero__title {
-  @apply sm:text-[82px] text-[40px] font-bold leading-[70px] ;
+  @apply sm:text-[82px] text-[40px] font-bold leading-10 md:leading-[70px] relative z-10; 
 }
 
 .hero__subtitle {
-  @apply text-[18px] text-[#121619da] font-medium mt-5 leading-relaxed;
+  @apply text-[18px] text-[#121619da] font-medium mt-5 leading-relaxed relative z-10;
 }
 
 .hero__image-container {
@@ -243,3 +243,47 @@
   font-family: 'Gemsbuck', sans-serif;
   font-weight: bold;
 }
+
+
+
+/* show more button styles */
+.btn:link,
+.btn:visited {
+  transition: all .2s;
+  position: absolute;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn-white {
+  background-color: #381d2a;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius:5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #6b504b83;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.margin{
+  margin-top: 0 !important;
+}
+

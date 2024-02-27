@@ -1,21 +1,66 @@
 import Image from "next/image"
 import Link from "next/link"
 
+const footerSections = [
+  {
+    title: "Company",
+    links: [
+      { text: "About Us", url: "/about" },
+      { text: "Blog", url: "https://www.truecar.com/best-cars-trucks/cars/" },
+      { text: "Github", url: "https://github.com/" },
+      { text: "Free Products", url: "https://www.latestfreestuff.co.uk/" },
+    ],
+  },
+  {
+    title: "Help and Support",
+    links: [
+      { text: "Knowledge Center", url: "https://en.wikipedia.org/wiki/Car" },
+      { text: "Contact Us", url: "https://www.cars.com/contact/" },
+      { text: "Premium Support", url: "https://cloud.google.com/support/docs/premium" },
+      { text: "Pricing", url: "https://res.cloudinary.com/practicaldev/image/fetch/s--OcSoDaEr--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/esc3s3p8ihmhbbyk1ebt.png" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { text: "Documentation", url: "https://www.safedrivingforlife.info/advice/car-driving/your-vehicle-and-documents/vehicle-documents-for-car-drivers/" },
+      { text: "Custom Development", url: "https://en.wikipedia.org/wiki/Custom_car" },
+      { text: "Discord", url: "https://discord.com/" },
+      { text: "Tailwind Components", url: "https://tailwindcss.com/" },
+    ],
+  },
+  {
+    title: "Technologies",
+    links: [
+      { text: "React Js", url: "https://react.dev/" },
+      { text: "HTML", url: "https://html.com/" },
+      { text: "CSS", url: "https://www.w3schools.com/css/" },
+      { text: "Next Js", url: "https://nextjs.org/" },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-200">
-      <div className="container flex flex-wrap items-center justify-center py-5 mx-auto  lg:justify-between">
+    <footer className="bg-gray-200 flex flex-col md:flex-row justify-between items-center">
+      <div className="flex flex-col w-full md:w-[30%] flex-wrap px-16 gap-3 md:items-start py-5 mx-auto  lg:justify-between">
+      {/* logo section */}
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
-            <li><Link href={"/"}>
-                <Image src="/logo.svg" width={100} height={90} alt="logo" className="object-contain w-10 mr-2 sm:w-16"/>
+            <li>
+                <Link href={"/"}>
+                  <Image src="/logo.svg" width={90} height={90} alt="logo" className="object-contain mr-2 w-10"/>
                 </Link>
             </li>
           </ul>
         </div>
+        
+        {/* Copyright Section */}
         <p className="text-center text-gray-400">
           @2024 All rights reserved by GearShow.
         </p>
+
+        {/* Social Media Icons Section */}
         <div className="flex justify-center space-x-4 mt-4 lg:mt-0">
           <Link href='https://www.facebook.com/' target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><path fill="#000000" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
@@ -31,6 +76,24 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+      <div className="hidden md:flex w-[70%] justify-around px-5">
+        {/* Mapping through footerSections array */}
+        {footerSections.map((section, index) => (
+          <div key={index} className="flex flex-col manrope margin font-light">
+            <Link href={`/${section.title.toLowerCase()}`} className="font-bold m-0 text-black">
+              <h1 className="m-0">{section.title}</h1>
+            </Link>
+            {/* Mapping through links in each section */}
+            {section.links.map((link, linkIndex) => (
+              //  The rel attribute helps to ensure that the new tab has no access to the window.opener property, which can be a security risk.
+              <Link key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="m-0 text-gray-500 hover:text-black">
+                {link.text}
+              </Link>
+            ))}
+          </div>
+        ))}
+      </div>
+
     </footer>
   )
 }
