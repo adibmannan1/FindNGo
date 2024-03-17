@@ -34,7 +34,7 @@ const footerSections = [
     links: [
       { text: "React Js", url: "https://react.dev/" },
       { text: "HTML", url: "https://html.com/" },
-      { text: "Javaqscript", url: "https://www.javascript.com/" },
+      { text: "Javascript", url: "https://www.javascript.com/" },
       { text: "Next Js", url: "https://nextjs.org/" },
     ],
   },

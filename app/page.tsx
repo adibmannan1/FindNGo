@@ -88,7 +88,7 @@ export default function Home() {
             <ShowMore pageNumber={limit/ 9} isNext={limit > allCars.length} setLimit={setLimit}/>
           </section>
         ):(<div className="home__error-container">
-          <h1 className="text-[#121619da] font-bold text-2xl">Sorry, we do not sell such cars</h1>
+          <h1 className="text-[#121619da] font-bold text-2xl">Sorry, we do not sell such cars, or try Reloading</h1>
         </div>)}
       </div>
     </main>
