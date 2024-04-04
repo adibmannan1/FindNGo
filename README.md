@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Why I Created This Project
 
-## Getting Started
+This helps to find any car model and users can filter using a model name or brand name. This is a next js project where both server and client site rendering is implemented.
 
-First, run the development server:
+Usage: https://gearshow.netlify.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Latest Cars
+Filter cars by make
+Filter cars by model
+Technologies Used: React js, Next Js, cars api, javascript, npm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A glance of Gear 
+Show:
+![home page](https://github.com/adibmannan1/GearShow/assets/97168108/8166021e-f4d8-4ab0-b01f-2229655fea78)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![categories](https://github.com/adibmannan1/GearShow/assets/97168108/258b33ca-4de3-41fc-bcb5-07857799ce4e)
